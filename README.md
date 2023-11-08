@@ -64,10 +64,10 @@ To run the application, use the following commands:
 
 - `winners`: Displays the winning numbers and prize distribution in euros.
 
-## Tests
+### Usage scenarios
+<img src="docs/demo.gif" alt="Animated GIF" align="center">
 
-- `purchase`: Allows participants to purchase a lottery ticket by providing their first name. A ticket number will be assigned.
-
-- `draw`: Triggers the lottery draw. Three winners will be randomly selected, and prize amounts will be calculated.
-
-- `winners`: Displays the winning numbers and prize distribution in euros.
+## Contributing
+N/A
+## License
+N/A
