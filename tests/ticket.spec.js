@@ -5,14 +5,14 @@ const {
   prepareTicketsPool,
 } = require('../src/ticket');
 
-let { TICKET_PRICE, totalJackpot} = require('../src/utils');
+const { TICKET_PRICE, totalJackpot } = require('../src/utils');
 
 describe('buyTicket', () => {
   it('should buy a lottery ticket and update totalJackpot', () => {
     const initialTotalJackpot = totalJackpot;
     const name = 'Alice';
 
-    let updatedTotalJackpot = buyTicket(name);
+    const updatedTotalJackpot = buyTicket(name);
 
     // Ensure a new ticket is added and totalJackpot is updated
     expect(tickets.length).toBe(1);
@@ -41,6 +41,8 @@ describe('prepareTicketsPool', () => {
 
     // Ensure the tickets pool is prepared and totalJackpot is updated
     expect(result.ticketsPool.length).toBe(count);
-    expect(result.totalJackpot).toBe(initialTotalJackpot + count * TICKET_PRICE);
+    expect(result.totalJackpot).toBe(
+      initialTotalJackpot + count * TICKET_PRICE,
+    );
   });
 });

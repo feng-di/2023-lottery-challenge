@@ -1,4 +1,5 @@
-let { formatCurrency, TICKET_PRICE, totalJackpot } = require('../src/utils');
+const { formatCurrency, TICKET_PRICE } = require('../src/utils');
+let { totalJackpot } = require('../src/utils');
 
 describe('formatCurrency', () => {
   it('should format a number as currency', () => {
