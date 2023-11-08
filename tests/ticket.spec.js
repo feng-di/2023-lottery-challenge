@@ -12,7 +12,7 @@ describe('buyTicket', () => {
     const initialTotalJackpot = totalJackpot;
     const name = 'Alice';
 
-    const updatedTotalJackpot = buyTicket(name);
+    const { totalJackpot: updatedTotalJackpot } = buyTicket(name);
 
     // Ensure a new ticket is added and totalJackpot is updated
     expect(tickets.length).toBe(1);

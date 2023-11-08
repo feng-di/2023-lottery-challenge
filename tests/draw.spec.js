@@ -36,9 +36,9 @@ describe('drawLuckyNumbers', () => {
     expect(new Set(luckyNumbers).size).toBe(3);
 
     // Check if the console.log output is as expected
-    expect(consoleOutput).toContain('1st ball: [' + luckyNumbers[0] + ']');
-    expect(consoleOutput).toContain('2nd ball: [' + luckyNumbers[1] + ']');
-    expect(consoleOutput).toContain('3rd ball: [' + luckyNumbers[2] + ']');
+    expect(consoleOutput[1]).toContain('1st ball: [' + luckyNumbers[0] + ']');
+    expect(consoleOutput[2]).toContain('2nd ball: [' + luckyNumbers[1] + ']');
+    expect(consoleOutput[3]).toContain('3rd ball: [' + luckyNumbers[2] + ']');
   });
 });
 

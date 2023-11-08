@@ -23,16 +23,20 @@ const generateTicketNumbers = () => {
 
 // Function to buy a lottery ticket
 const buyTicket = (name) => {
-  const ticketNumbers = generateTicketNumbers();
-  tickets.push({ name, ticketNumbers });
+  const ticket = { name, numbers: generateTicketNumbers() };
+  tickets.push(ticket);
   totalJackpot += TICKET_PRICE;
-  // console.log(
-  //   `Ticket purchased for [${name}]. Your ticket numbers are [${ticketNumbers.join(
-  //     ', ',
-  //   )}].`,
-  // );
 
-  return totalJackpot;
+  return { ticket, totalJackpot };
+};
+
+// Function to display ticket information
+const getTicketInformation = (ticket) => {
+  console.log(
+    `Ticket purchased for [${
+      ticket.name
+    }]. Your ticket numbers are [${ticket.numbers.join(', ')}].`,
+  );
 };
 
 // Function to prepare a pool of tickets to draw winners from
@@ -41,6 +45,9 @@ const prepareTicketsPool = (count = 50) => {
     buyTicket(randomFirstName());
   }
 
+  console.log(
+    `Generated a pool of 50 tickets to draw, with total jackpot [€ ${totalJackpot}]`,
+  );
   return { ticketsPool: tickets, totalJackpot };
 };
 
@@ -49,4 +56,5 @@ module.exports = {
   tickets,
   generateTicketNumbers,
   prepareTicketsPool,
+  getTicketInformation,
 };

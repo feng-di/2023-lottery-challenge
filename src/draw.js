@@ -23,13 +23,13 @@ const drawLuckyNumbers = (min = 1, max = 50) => {
   console.log('CodeCraft Challenge Results\n');
   console.log(`1st ball: [${luckNumbers[0]}]`);
   console.log(`2nd ball: [${luckNumbers[1]}]`);
-  console.log(`3rd ball: [${luckNumbers[2]}]`);
+  console.log(`3rd ball: [${luckNumbers[2]}]\n`);
 
   return luckNumbers;
 };
 
 // Function to draw three winners and calculate prizes
-const drawWinners = async () => {
+const drawWinners = () => {
   // TODO: Tickets randomly generated, not purchased, to be replaced in real scenario
   const { ticketsPool, totalJackpot } = prepareTicketsPool(50);
   finalJackpot = totalJackpot;

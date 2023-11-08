@@ -18,18 +18,18 @@ This is a Node.js command-line application for simulating a simple lottery game.
 
 ## Installation
 
-1. Clone the repository or unzip the package and then 
+1. Clone the repository or unzip the package
    ```sh
-   git clone https://github.com/yourusername/lottery-cli-app.git
+   git clone https://github.com/feng-di/2023-lottery-challenge.git
    ```
-
-2. Navigate to the project directory:
+    or
+    ```sh
+    $ unzip 2023-lottery-challenge.zip
+    ```
+   
+2. Install dependencies:
    ```sh
-   cd lottery-cli-app
-   ```
-
-3. Install dependencies:
-   ```sh
+   cd 2023-lottery-challenge
    npm install
    ```
 
@@ -39,20 +39,32 @@ To run the application, use the following commands:
 
 - Buy a lottery ticket:
    ```sh
-   node src/index.js purchase
+   npm run buy <first name>
    ```
 
 - Trigger a lottery draw:
    ```sh
-   node src/index.js draw
-   ```
-
+   npm run draw
+  ```
+  
 - Display the winning tickets and prize distribution in euros:
    ```sh
-   node src/index.js winners
+   npm run winners
    ```
 
+- Get help information about the commands:
+   ```sh
+   npm run help
+   ```
 ## Commands
+
+- `purchase`: Allows participants to purchase a lottery ticket by providing their first name. A ticket number will be assigned.
+
+- `draw`: Triggers the lottery draw. Three winners will be randomly selected, and prize amounts will be calculated.
+
+- `winners`: Displays the winning numbers and prize distribution in euros.
+
+## Tests
 
 - `purchase`: Allows participants to purchase a lottery ticket by providing their first name. A ticket number will be assigned.
 
